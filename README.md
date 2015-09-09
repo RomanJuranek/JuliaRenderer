@@ -2,7 +2,7 @@
 
 ![Julia set](julia1.png)
 
-This function renders a selected view of Julia fractal. It supports supersampling and'motion blur-like effect small changes of the fractal parmeter `c`. The implementation is brute force without any optimizations (except for parallelization using `parpool`).
+This function renders a selected view of Julia fractal. It supports supersampling and'motion blur-like effect (small changes of the fractal parmeter `c`). The implementation is brute force without any optimizations (except for parallelization using `parpool`).
 
 ![Demo image](julia.jpg)
 
