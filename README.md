@@ -1,6 +1,6 @@
 # JuliaRenderer
 
-[!julia.jpg]
+![Demo image](julia.jpg)
 
 This image was generated with the following command and post processed in Gimp. It took around one hour to render.
 
