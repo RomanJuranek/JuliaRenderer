@@ -29,7 +29,7 @@ is = single(linspace(rect(3),rect(4),sz(2)));
 d = (rs(2)-rs(1))/4; % Smoothing extent depends on pixel size
 
 % Generate z and c for every pixel and sample
-Z = complex(r,i); C = repmat(c,size(Z)); I = zeros(sz(1), sz(2), nSamples);
+Z = complex(r,i); C = repmat(c,size(Z)); I = zeros(sz(2), sz(1), nSamples);
 
 batch = 4;
 for s = 1:batch:nSamples
@@ -39,7 +39,7 @@ for s = 1:batch:nSamples
     Z2 = num2cell(Z1,1); C2 = num2cell(C1,1); % Split to workers
     ims = cell(1,numel(Z2));
     parfor i = 1:numel(Z2),ims{i}=renderElement(Z2{i},C2{i},maxIter,fun);end; % Do the job
-    I(:,:,smps) = reshape(cell2mat(ims), sz(1), sz(2), []); % Get the resulting image
+    I(:,:,smps) = reshape(cell2mat(ims), sz(2), sz(1), []); % Get the resulting image
 end
 
 end
