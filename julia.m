@@ -42,6 +42,8 @@ for s = 1:batch:nSamples
     I(:,:,smps) = reshape(cell2mat(ims), sz(2), sz(1), []); % Get the resulting image
 end
 
+I = sum(I,3);
+
 end
 
 function n = renderElement(z, c, maxIter, fun)
