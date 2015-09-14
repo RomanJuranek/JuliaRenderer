@@ -1,6 +1,7 @@
 # JuliaRenderer
 
-![Julia set](julia1.png)
+![Shapes of Julia set](julia_shapes.png)
+This image shows how the shape of julia set changes with different `c` parameter. Each cell corresponds to the image rendered with uniquie setting of `c`.
 
 This function renders a selected view of Julia fractal. It supports supersampling and'motion blur-like effect (small changes of the fractal parmeter `c`). The implementation is brute force without any optimizations (except for parallelization using `parpool`).
 
